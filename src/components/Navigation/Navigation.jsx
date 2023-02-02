@@ -6,18 +6,16 @@ import { selectIsLoggedIn } from 'redux/auth/selectors';
 
 const StyledLink = styled(NavLink)`
   color: white;
+  font-weight: 600;
   &:first-of-type {
     margin-right: 15px;
   }
-
   &.active {
     color: orange;
   }
 `;
-
 export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  console.log('NavigationComponent');
   return (
     <Box>
       <StyledLink to="/goit-react-hw-08-phonebook/">Home</StyledLink>

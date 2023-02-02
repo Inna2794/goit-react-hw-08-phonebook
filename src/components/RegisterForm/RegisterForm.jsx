@@ -1,5 +1,4 @@
 import { Box, Button, TextField } from '@mui/material';
-
 import { useDispatch } from 'react-redux';
 import { register, reset } from 'redux/auth/operations';
 
@@ -29,8 +28,6 @@ const RegisterForm = () => {
     );
     form.reset();
   };
-
-  console.log('RegisterFormComponent');
 
   return (
     <Box

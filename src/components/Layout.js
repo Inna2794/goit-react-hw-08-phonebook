@@ -6,14 +6,13 @@ import { Box, styled, Typography } from '@mui/material';
 
 const CustomBox = styled(Box)`
   height: 100vh;
-  background-image: url(https://cdn.pixabay.com/photo/2015/11/19/21/14/glasses-1052023_960_720.jpg);
-  background-position: center;
+  background-image: url(https://pixabay.com/get/g90b79af91adddfa509a82e634d02599c9147c8947719a42262a591a465053404cc5cfbd14b8009ab11a372357e17af2bca8fc6de5bcfec603e768aa0efa27416_1920.jpg);
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 `;
 
 export const Layout = () => {
-  console.log('Layout');
   return (
     <CustomBox>
       <AppBarComponent />

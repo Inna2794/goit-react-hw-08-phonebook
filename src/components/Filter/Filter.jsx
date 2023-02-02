@@ -1,6 +1,5 @@
 import { TextField } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-// import { filterContacts } from 'redux/operations';
 import { selectFilter } from 'redux/contacts/selectors';
 import { setFilter } from 'redux/contacts/sliceFilter';
 
@@ -11,8 +10,6 @@ const Filter = () => {
   const handleChange = evt => {
     dispatch(setFilter(evt.currentTarget.value));
   };
-
-  console.log('FilterComponent');
 
   return (
     <>

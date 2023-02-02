@@ -3,18 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 const StyledLink = styled(NavLink)`
   color: white;
+  font-weight: 600;
   &:first-of-type {
     margin-right: 15px;
   }
-
-  &.active {
+  &.active,
+  &.hover {
     color: orange;
   }
 `;
-
 export const AuthNav = () => {
-  console.log('AuthNavComponent');
-
   return (
     <nav>
       <StyledLink to="/goit-react-hw-08-phonebook/register">

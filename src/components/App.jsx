@@ -1,7 +1,3 @@
-// import Form from 'components/Form';
-// import Filter from 'components/Filter';
-// import Contacts from 'components/Contacts';
-
 import { Layout } from './Layout';
 import { lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -24,8 +20,6 @@ export const App = () => {
   useEffect(() => {
     if (token) dispatch(refreshUser());
   }, [dispatch, token]);
-
-console.log('AppComponent')
 
   return isRefreshing ? (
     <b>Refreshing user...</b>
@@ -64,5 +58,3 @@ console.log('AppComponent')
     </Routes>
   );
 };
-
-//

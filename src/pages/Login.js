@@ -18,7 +18,6 @@ export default function Login() {
       dispatch(reset());
     }, 5000);
   }
-  console.log('LoginPage');
   return (
     <CustomBox>
       {error && (

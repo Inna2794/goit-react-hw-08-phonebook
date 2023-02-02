@@ -13,7 +13,6 @@ export const UserMenu = () => {
   const user = useSelector(selectUser);
   if (user === undefined) return;
   const name = user.name[0].toUpperCase() + user.name.slice(1);
-  console.log('UserMenuComponent');
   return (
     <CustomMenu>
       <Typography component="p">Welcome, {name}</Typography>

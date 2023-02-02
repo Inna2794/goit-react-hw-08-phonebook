@@ -10,8 +10,8 @@ export const CustomBox = styled(Box)`
   margin: 25px auto 0;
   padding: 15px;
   background-image: linear-gradient(
-    rgba(200, 200, 200, 0.7),
-    rgba(200, 200, 200, 0.7)
+    rgba(245, 245, 245, 0.85),
+    rgba(245, 245, 245, 0.85)
   );
   border-radius: 10px;
 `;
@@ -29,7 +29,6 @@ export default function Register() {
       dispatch(reset());
     }, 5000);
   }
-  console.log('RegisterPage');
 
   return (
     <CustomBox>

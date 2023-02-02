@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import { filterContacts } from './operations';
 
 const filterSlice = createSlice({
   name: 'filter',

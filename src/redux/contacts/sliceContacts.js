@@ -7,21 +7,16 @@ import {
 } from './operations';
 
 const handlePending = state => {
-  console.log('ContactshandlePending');
   state.isLoading = true;
 };
 
 const handleFulfilled = (state, action) => {
-  console.log('ContactshandleFulfilled');
-
   state.isLoading = false;
   state.error = null;
   state.items = action.payload;
 };
 
 const handleRejected = (state, action) => {
-  console.log('ContactshandleRejected');
-
   state.isLoading = false;
   state.error = action.payload;
 };
@@ -37,7 +32,6 @@ const contactsSlice = createSlice({
 
     builder.addCase(addContacts.pending, handlePending);
     builder.addCase(addContacts.fulfilled, (state, action) => {
-      console.log('addContactsfulfilled');
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
@@ -46,7 +40,6 @@ const contactsSlice = createSlice({
 
     builder.addCase(deleteContacts.pending, handlePending);
     builder.addCase(deleteContacts.fulfilled, (state, action) => {
-      console.log('del', action.payload, 'deleteContacts');
       state.isLoading = false;
       state.error = null;
       const index = state.items.findIndex(item => item.id === action.payload);
@@ -56,7 +49,6 @@ const contactsSlice = createSlice({
 
     builder.addCase(filterContacts.pending, handlePending);
     builder.addCase(filterContacts.fulfilled, (state, action) => {
-      console.log('filterContactsfulfilled', action.payload);
       state.isLoading = false;
       state.error = null;
       state.items = action.payload;
@@ -66,16 +58,3 @@ const contactsSlice = createSlice({
 });
 
 export const contactsReducer = contactsSlice.reducer;
-
-// reducers: {
-//   addContacts(state, action) {
-//     state.push(action.payload);
-//   },
-
-//   deleteContacts(state, action) {
-//     const index = state.findIndex(task => task.id === action.payload);
-//     state.splice(index, 1);
-//   },
-// },
-
-// export const { addContacts, deleteContacts } = contactsSlice.actions;

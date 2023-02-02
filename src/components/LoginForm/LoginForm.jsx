@@ -4,8 +4,6 @@ import { logIn, reset } from 'redux/auth/operations';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-  // dispatch(reset());
-
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -21,11 +19,8 @@ const LoginForm = () => {
         password,
       })
     );
-    console.log('LoginFormReset');
     form.reset();
   };
-
-  console.log('LoginFormComponent ');
 
   return (
     <Box

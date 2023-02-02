@@ -12,13 +12,11 @@ const StyledAppBar = styled(AppBar)`
   align-items: center;
   height: 40px;
   padding: 0 30px;
-  /* background-color: grey; */
-  /* background-image: linear-gradient(to right, blue 5%, yellow); */
+  background-color: #000;
 `;
 
 export const AppBarComponent = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  console.log('AppBarComponent');
   return (
     <StyledAppBar position="static">
       <Navigation />
